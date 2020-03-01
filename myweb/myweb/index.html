@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WeatherPy</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><b>Lattitude</b></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Plots</b><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="temparature.html">Max Temperature</a></li>
+                      <li><a href="humidity.html">Humidity</a></li>
+                      <li><a href="cloudiness.html">Cloudiness</a></li>
+                      <li><a href="Windspeed.html">Wind Speed</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="Comparison.html"><b>Comparison</b></a></li>
+                  <li><a href="cities.html"><b>Data</b></a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+      <div class="container">
+            <!-- Row 1 -->
+              <div class="row">
+                <div class="col-sm-8">
+                  <h1>Summary:Latitude vs.X</h1>
+               <br>
+               <img class="homeimage" src="Resources\assets\images\Fig1.png" alt="Lattitude Vs Temperature Plot">
+                    <p class="text">
+                        The purpose of this project was to analyze how the weather
+                        changes as you get closer to the equator. To accomplish
+                        this analysis, this module employs Python requests, weather APIs,
+                        and JSON traversals. Using the Citipy library and
+                        OpenWeatherMap API, this script creates a representative
+                        model of weather across 500+ cities across the globe.
+                        <br>
+                        <br>
+                        The program randomly generates over 1000 latitude/longitude pairs
+                        and feeds them to the OpenWeatherMapAPI. It performs a series of
+                        successive throttled API calls to extract weather data in
+                        all found cities. It then drops duplicate cities, null value
+                        rows, counts the total, and saves the resulting table
+                        as a CSV. To showcase the following relationships, it
+                        builds a series of scatter plots using Matplotlib:
+                    </p> 
+                        <ul>
+                            <li>Temperature (F) vs. Latitude</li>
+                            <li>Humidity (%) vs. Latitude</li>
+                            <li>Cloudiness (%) vs. Latitude</li>
+                            <li>Wind Speed (mph) vs. Latitude</li>
+                        </ul>    
+                </p>
+                </div>
+              </div>
+
+        </div>
+</body>
+</html>
